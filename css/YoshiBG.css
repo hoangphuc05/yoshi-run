@@ -1,7 +1,7 @@
 div#YoshiBG_furthestBack
 {
     position : absolute;
-    width : 3000px;
+    width : 10000px;
     height : 540px;
     margin : auto;
     background-image: url(../img/backlayer_sprite_1.png);
@@ -11,7 +11,7 @@ div#YoshiBG_furthestBack
 div#YoshiBG_back
 {
     position : absolute;
-    width : 3000px;
+    width : 10000px;
     height : 540px;
     margin : auto;
     background-image: url(../img/frontlayer_sprite_1.png);
@@ -21,7 +21,7 @@ div#YoshiBG_back
 div#YoshiBG_mid
 {
     position : absolute;
-    width : 3000px;
+    width : 10000px;
     height : 540px;
     margin : auto;
     background-image: url(../img/middlelayer_sprite_1.png);
@@ -31,7 +31,7 @@ div#YoshiBG_mid
 div#YoshiBG_frontmost
 {
     position : absolute;
-    width : 3000px;
+    width : 10000px;
     height : 540px;
     margin : auto;
     background-image: url(../img/Background2.png);
