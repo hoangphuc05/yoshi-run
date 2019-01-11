@@ -4,41 +4,27 @@
         <title>Play Game</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/design.css">
+        <link rel="stylesheet" href="css/YoshiBG.css" />
     </head>
-
-    <img src="images/animated_logo.gif" id="bg-alt">
-    <br>
-    <div class ="links"> 
-            <a href="index.html"><button> Home </button></a> 
-            &nbsp;
-            <a href="resources.html"><button> Resources </button></a> 
-            &nbsp;
-            <a href="design.html"><button> Design </button> </a> 
-            &nbsp;
-            <a href="game.html"><button> Play Game </button> </a> 
-    </div>
-
-    <span id="gameDescription">
-        <body>
-                <br>
-                <p> Ever thought that Mario was overrated? Maybe <tag id="italic">too</tag> overrated?  Have you ever felt that Yoshi would make a better main character? </p>
-
-                <p> He can jump. He can kick goomba butt. He can run fast. <tag id="italic">Maybe…Yoshi is better than Mario!</tag></p>
-                
-                <p> Prove to the world that Yoshi is superior to Mario. </p>
-                <br>
-                <p>Instructions:
-                Left and right arrows to move, up arrow to jump. </p> 
-
-                <img src="images/Complete_Background.png" alt = "gamePlaceholder" id="holder">
-
-
-                
-
-        </body>
-
-    </span>
-
-
-
+    
+    <img src="images/animated_logo.gif" id="bg-alt" style="height: 10em; width: 10em;">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="game.html">Play Game</a></li>
+        </ul>
+    </nav>
+    <body>
+        <div class="game">
+            <div id = "YoshiBG_furthestBack"> </div>
+            <div id = "YoshiBG_back"></div>
+            <div id = "YoshiBG_mid"></div>
+            <div id = "YoshiBG_frontmost"></div>
+            <div id =  "Yoshi"></div>
+            <script src="js/jquery-1.11.1.js"></script>
+            <script src="js/YoshiBG.js" defer></script>
+        </div>
+    </body>
 </html>
