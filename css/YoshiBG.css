@@ -38,3 +38,10 @@ div#YoshiBG_frontmost
     z-index : -1;
 }
 
+div#Yoshi {
+    position: absolute;
+    top: 320px;
+    left: 150px;
+    margin:auto;
+    z-index: 0;
+}
