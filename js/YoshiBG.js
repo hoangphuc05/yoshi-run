@@ -1,6 +1,11 @@
 
 (function ($) {
 
+    var ground = 320;
+    var yoshistate = 'right';
+    var y = ground;
+    var gravity = 10;
+    var jump = false;
     var spot = 0;
     var yoshispeed = -40;             //orig : var yoshispeed = -40;
 
@@ -30,6 +35,15 @@
 
 
 
+
+    
+
+
+
+
+
+
+
     $("body" ).click(function() {
         yoshispeed *= -1.0;
                                    
@@ -42,6 +56,42 @@
             $('div#Yoshi').empty().append($yoshi_right);
         $('div#Yoshi').show();
       });
+
+    
+
+    $("body").dblclick( function(){
+        jump = true;
+    
+    });
+
+    function keyHandler(e){
+        e = e || window.event;
+        if (e.keyCode == '38') {
+            jump = true;
+        }
+        else if (e.keyCode == '40') {
+            // down arrow
+        }
+        else if (e.keyCode == '37') {
+           // left arrow
+           if (yoshistate=='right'){
+            yoshispeed *= -1.0;
+            yoshistate = 'left'
+            };
+           
+           $('div#Yoshi').empty().append($yoshi_left);
+        }
+        else if (e.keyCode == '39') {
+           // right arrow
+           if (yoshistate=='left'){
+           yoshispeed *= -1.0;
+           yoshistate = 'right'
+           };
+
+           $('div#Yoshi').empty().append($yoshi_right);
+        }
+    
+    }
 
     function draw () {
 
@@ -57,8 +107,25 @@
             spot = 0;
         }
 
+        if (jump) {
+            y=y-30;
+            if (y < 50){
+                jump = false;
+            }
+        } else {
+            if (y >=ground){}
+            if (y < ground){
+                y=y+9.8;
+            }
+        }
+
+
+
+        console.log(y);   
+        document.getElementById('Yoshi').style.top=y+'px';
         
     }
 
     draw();
+    document.onkeydown = keyHandler;
 })(jQuery);
