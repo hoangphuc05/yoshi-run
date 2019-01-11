@@ -33,3 +33,7 @@ function clickHandler(event){
 
 var test123=yoshi.state;
 document.getElementById("body").addEventListener("click",clickHandler);
+
+
+
+
