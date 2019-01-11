@@ -45,3 +45,6 @@ div#Yoshi {
     margin:auto;
     z-index: 0;
 }
+#body {
+    overflow: hidden;
+}
