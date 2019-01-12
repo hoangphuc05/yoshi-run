@@ -19,6 +19,7 @@ span
     font-family : Helvetica, sans-serif;
 }
 
+
 #gameDescription, div ul
 {
     text-align : center;
@@ -47,7 +48,7 @@ body
 {
     margin-left : 50px;
     margin-right : 50px;
-    background-color :rgb(0, 115, 230);
+    background-image : url(../images/yoshi_bg.png);
 
 }
 
@@ -55,8 +56,33 @@ body
     top: 20px; 
     left: -25px;
 }
+
+#title
+{
+    margin: 80px 20px 20px 530px;
+}
+
+#texthome p, h1
+{
+    text-align: center;
+    font-family : Helvetica, sans-serif;
+    font-size: 30px;
+    text-decoration : none; 
+    font-weight : bold;
+    padding-top: 50px;
+}
+
+#about p
+{
+    font-size: 20px;           
+    text-align : justify;
+    margin : 0 auto;
+    width : 30em;
+    padding-top : 5px;
+}
+
 nav ul{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     width: 125%;
     margin-bottom: -5px;
     margin-top: 40px;
@@ -176,7 +202,7 @@ button:hover
 }
 
 .game{
-    position: absolute;
+    
     margin: auto;
     left: 0px;
 }
