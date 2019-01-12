@@ -196,3 +196,9 @@ button:hover
 #body{
     overflow: hidden;
 }
+
+#scorebox{
+    
+    color: #fff;
+    font-size: 22pt;
+}
