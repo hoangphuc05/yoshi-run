@@ -185,6 +185,7 @@
         document.getElementById('Yoshi').style.left=x+'%';
         //console.log(random1);
         document.getElementById('coin').style.top=random1+'px';
+        document.getElementById("scorebox").innerHTML = 'Coins Collected: ' + scorecounter;
         //document.getElementById('coin').style.left=randomx+'px';
         //coinpos=coinpos-20;
        //document.getElementById('coin').style.left = coinpos;
@@ -223,7 +224,7 @@
                 if (currentTime - prevtime >=500 ){
                 scorecounter=scorecounter+1;
                 console.log(scorecounter);
-                document.getElementById("scorebox").innerHTML = 'Coins Collected: ' + scorecounter;
+                
                 prevtime = currentTime;
                 }
                 }
