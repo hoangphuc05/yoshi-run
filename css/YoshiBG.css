@@ -43,8 +43,16 @@ div#Yoshi {
     top: 320px;
     left: 150px;
     margin:auto;
-    z-index: 0;
+    z-index: 1;
 }
 #body {
     overflow: hidden;
+}
+
+#coin {
+    position: absolute;
+    top: 320px;
+    left: 150px;
+    margin:auto;
+    z-index: 99;
 }

@@ -176,7 +176,7 @@ button:hover
 }
 
 .game{
-    position: absolute;
+    /*position: absolute;*/
     margin: auto;
     left: 0px;
 }

@@ -1,14 +1,26 @@
 
 (function ($) {
 
-    var ground = 320;
+    //random location for 
+    var random1=Math.floor((Math.random() * 332) + 268);
+    var randomx=Math.floor((Math.random() * 90) + 80)
+
+    var randomleftx = (Math.floor((Math.random() * 100) + 5))*(-1);
+
+    var coin = document.getElementById('coin');
+    var yoshi = document.getElementById('Yoshi');
+
+    var ground = 600;
     var initialV= -40;
     var gravity = 2.9;
 
 
     var v = initialV;
     var yoshistate = 'right';
+    var yoshichange = false;
+    var yoshichanger = false;
     var y = ground;
+    var x = 15;
     
     var jump = false;
     var spot = 0;
@@ -43,11 +55,15 @@
 
     
 
+    //$('div#coin').empty().append($yoshi_left);
+    //$('div#coin').empty().append($yoshi_right);
 
 
 
-
-
+    document.getElementById('YoshiBG_frontmost').style.left='0px';
+    document.getElementById('YoshiBG_mid').style.left='0px';
+    document.getElementById('YoshiBG_back').style.left='0px';
+    document.getElementById('YoshiBG_furthestBack').style.left='0px';
 
     $("body" ).click(function() {
         
@@ -82,7 +98,9 @@
            // left arrow
            if (yoshistate=='right'){
             yoshispeed *= -1.0;
-            yoshistate = 'left'
+            yoshistate = 'left';
+            yoshichange = true;
+            yoshichanger=false;
             };
            
            $('div#Yoshi').empty().append($yoshi_left);
@@ -91,7 +109,9 @@
            // right arrow
            if (yoshistate=='left'){
            yoshispeed *= -1.0;
-           yoshistate = 'right'
+           yoshistate = 'right';
+           yoshichanger = true;
+           yoshichange=false;
            };
 
            $('div#Yoshi').empty().append($yoshi_right);
@@ -105,7 +125,8 @@
 
         $('#YoshiBG_back').css('background-position', (spot * (1.0/12.0)) );
         $('#YoshiBG_mid').css('background-position', (spot * (1.0/6.0)) );
-        $('#YoshiBG_frontmost').css('background-position', (spot * (1.0/3.0)) );
+        $('#YoshiBG_frontmost').css('background-position', (spot * (1.0/2.7)) );
+        
        
         spot = spot + yoshispeed;
 
@@ -133,10 +154,86 @@
         }
 
 
+        if (yoshichange){
+            x=x+.2;
+            if (x >= 90){
+                yoshichange=false;
+            }
+        }
 
-        console.log(y);   
+        if (yoshichanger){
+            x=x-.5;
+            if (x <= 20){
+                yoshichanger=false;
+            }
+        }
+
+        //console.log(y);   
         document.getElementById('Yoshi').style.top=y+'px';
+        document.getElementById('Yoshi').style.left=x+'%';
+        //console.log(random1);
+        document.getElementById('coin').style.top=random1+'px';
+        //document.getElementById('coin').style.left=randomx+'px';
+        //coinpos=coinpos-20;
+       //document.getElementById('coin').style.left = coinpos;
+
+
+        var coinposi=coin.getBoundingClientRect();
+        var yoshiposi=yoshi.getBoundingClientRect();
+        var border=document.getElementById('body').getBoundingClientRect();
         
+
+        //console.log(coinposi.left);
+        //console.log(yoshiposi.left);
+        //console.log(document.getElementById('Yoshi').left);
+        if (yoshistate === 'right'){
+            randomx = randomx -15;
+            document.getElementById('coin').style.left=randomx+'px';
+            if (coinposi.left >= yoshiposi.right || coinposi.top >= yoshiposi.bottom || coinposi.right <= yoshiposi.left || coinposi.bottom <= yoshiposi.top)
+                {
+                    
+                }
+                else
+                {
+                // overlap
+                console.log('touched');
+                
+                random1=Math.floor((Math.random() * 332) + 268);
+                //randomx=Math.floor((Math.random() * 90) + 80);
+                randomx=border.right;
+                }
+                
+                if (coinposi.left<= 0){
+                    random1=Math.floor((Math.random() * 332) + 268);
+                    //randomx=Math.floor((Math.random() * 90) + 80);
+                    randomx=border.right;
+                }
+            }
+
+            if (yoshistate === 'left'){
+                randomleftx = randomleftx +15;
+                document.getElementById('coin').style.left=randomleftx+'px';
+                if (coinposi.left >= yoshiposi.right || coinposi.top >= yoshiposi.bottom || coinposi.right <= yoshiposi.left || coinposi.bottom <= yoshiposi.top)
+                    {
+                        
+                    }
+                    else
+                    {
+                    // overlap
+                    console.log('touched');
+                    
+                    random1=Math.floor((Math.random() * 332) + 268);
+                    //randomleftx = (Math.floor((Math.random() * 10) + 0));
+                    randomleftx = border.left;
+                    }
+                    
+                    if (coinposi.left>= border.right){
+                        random1=Math.floor((Math.random() * 332) + 268);
+                        //randomleftx = (Math.floor((Math.random() * 10) + 0));
+                        randomleftx=border.left;
+                    }
+            }
+
     }
 
     draw();
