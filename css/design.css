@@ -57,13 +57,13 @@ body
     left: -25px;
 }
 
-#title
-{
-    margin: 80px 20px 20px 530px;
+#title{
+    position: absolute;
+    left: 44%;
+    top: 95px;
 }
 
-#texthome p, h1
-{
+#texthome p, h1{
     text-align: center;
     font-family : Helvetica, sans-serif;
     font-size: 30px;
@@ -72,8 +72,7 @@ body
     padding-top: 50px;
 }
 
-#about p
-{
+#about p{
     font-size: 20px;           
     text-align : justify;
     margin : 0 auto;
@@ -91,6 +90,7 @@ nav ul{
     display: inline-block;
    
 }
+
 nav, ul, li{
     margin: 0;
     padding: 0;
@@ -121,20 +121,6 @@ nav ul li a{
     color:whitesmoke;
     font-size: 25px;
 }
-
-
-
-.links
-{
-    position : relative;
-    /*margin-bottom: 50px;*/
-    height:100px;
-    width:100px;
-   
-    
-   
-}
-
 a button
 {
     text-decoration : none;
