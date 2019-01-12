@@ -182,11 +182,11 @@
         //coinpos=coinpos-20;
        //document.getElementById('coin').style.left = coinpos;
 
-
+        document.getElementById("scorebox").innerHTML = 'Coins Collected: ' + scorecounter;
         var coinposi=coin.getBoundingClientRect();
         var yoshiposi=yoshi.getBoundingClientRect();
         var border=document.getElementById('body').getBoundingClientRect();
-        var prev
+        
 
         //console.log(coinposi.left);
         //console.log(yoshiposi.left);
