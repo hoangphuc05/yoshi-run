@@ -180,3 +180,7 @@ button:hover
     margin: auto;
     left: 0px;
 }
+
+#body{
+    overflow: hidden;
+}

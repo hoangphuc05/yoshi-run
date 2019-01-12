@@ -2,9 +2,14 @@
 (function ($) {
 
     var ground = 320;
+    var initialV= -40;
+    var gravity = 2.9;
+
+
+    var v = initialV;
     var yoshistate = 'right';
     var y = ground;
-    var gravity = 10;
+    
     var jump = false;
     var spot = 0;
     var yoshispeed = -40;             //orig : var yoshispeed = -40;
@@ -45,6 +50,7 @@
 
 
     $("body" ).click(function() {
+        
         yoshispeed *= -1.0;
                                    
         if ( yoshispeed > 0 )    
@@ -108,12 +114,19 @@
         }
 
         if (jump) {
-            y=y-30;
+            v=v+gravity;
+            y=y+v;
             if (y < 50){
+                //jump = false;
+            }
+            if (y >ground){
+                y=ground;
                 jump = false;
+                v = initialV;
             }
         } else {
-            if (y >=ground){}
+            if (y >ground){y=ground;}
+            if (y = ground){}
             if (y < ground){
                 y=y+9.8;
             }
