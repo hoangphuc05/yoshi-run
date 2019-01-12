@@ -15,8 +15,8 @@
     var yoshi = document.getElementById('Yoshi');
 
     var ground = 600;
-    var initialV= -40;
-    var gravity = 2.9;
+    var initialV= -43;
+    var gravity = 3;
     var scorecounter = 0;
 
 
