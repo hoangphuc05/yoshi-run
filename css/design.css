@@ -173,7 +173,7 @@ button:hover
 }
 
 .box {
-    background-color: rgba(245, 245, 245,0.6);
+    background-color: rgba(245, 245, 245,0.8);
     width: 800px;
     margin:auto;
     border-radius: 4px;

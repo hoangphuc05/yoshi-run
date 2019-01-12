@@ -65,7 +65,7 @@
     document.getElementById('YoshiBG_back').style.left='0px';
     document.getElementById('YoshiBG_furthestBack').style.left='0px';
 
-    $("body" ).click(function() {
+    /*$("body" ).click(function() {
         
         yoshispeed *= -1.0;
                                    
@@ -84,7 +84,7 @@
     $("body").dblclick( function(){
         jump = true;
     
-    });
+    });*/
 
     function keyHandler(e){
         e = e || window.event;
