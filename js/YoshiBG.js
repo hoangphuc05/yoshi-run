@@ -1,6 +1,10 @@
 
 (function ($) {
 
+
+    //var a = new Date();
+    //var prevtime = a.getTime();
+    var prevtime = 0;
     //random location for 
     var random1=Math.floor((Math.random() * 332) + 268);
     var randomx=Math.floor((Math.random() * 90) + 80)
@@ -13,6 +17,7 @@
     var ground = 600;
     var initialV= -40;
     var gravity = 2.9;
+    var scorecounter = 0;
 
 
     var v = initialV;
@@ -181,7 +186,7 @@
         var coinposi=coin.getBoundingClientRect();
         var yoshiposi=yoshi.getBoundingClientRect();
         var border=document.getElementById('body').getBoundingClientRect();
-        
+        var prev
 
         //console.log(coinposi.left);
         //console.log(yoshiposi.left);
@@ -196,11 +201,20 @@
                 else
                 {
                 // overlap
-                console.log('touched');
+                
                 
                 random1=Math.floor((Math.random() * 332) + 268);
                 //randomx=Math.floor((Math.random() * 90) + 80);
                 randomx=border.right;
+                var d = new Date();
+                var currentTime = d.getTime();
+                //console.log(currentTime - prevtime)
+                if (currentTime - prevtime >=500 ){
+                scorecounter=scorecounter+1;
+                console.log(scorecounter);
+                document.getElementById("scorebox").innerHTML = 'Coins Collected: ' + scorecounter;
+                prevtime = currentTime;
+                }
                 }
                 
                 if (coinposi.left<= 0){
@@ -220,7 +234,14 @@
                     else
                     {
                     // overlap
-                    console.log('touched');
+                    var d = new Date();
+                    var currentTime = d.getTime();
+                    //console.log(currentTime - prevtime)
+                    if (currentTime - prevtime >=500 ){
+                    scorecounter=scorecounter+1;
+                    console.log(scorecounter);
+                    prevtime = currentTime;
+                    }
                     
                     random1=Math.floor((Math.random() * 332) + 268);
                     //randomleftx = (Math.floor((Math.random() * 10) + 0));
