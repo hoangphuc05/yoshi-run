@@ -1,19 +1,21 @@
 
 (function ($) {
 
+    var border=document.getElementById('body').getBoundingClientRect();
 
     //var a = new Date();
     //var prevtime = a.getTime();
     var prevtime = 0;
     //random location for coin from the right
     var random1=Math.floor((Math.random() * 332) + 268);
-    var randomx=Math.floor((Math.random() * 90) + 80)
+    var randomx=border.right;
 
     //radom location for coin from the left
     var randomleftx = (Math.floor((Math.random() * 100) + 5))*(-1);
 
     var coin = document.getElementById('coin');
     var yoshi = document.getElementById('Yoshi');
+
 
     //physic
     var ground = 600;
@@ -61,7 +63,7 @@
 
 
 
-
+    
     
 
     //$('div#coin').empty().append($yoshi_left);
@@ -69,10 +71,12 @@
 
 
     //put all the backgroung to the left
+    
     document.getElementById('YoshiBG_frontmost').style.left='0px';
     document.getElementById('YoshiBG_mid').style.left='0px';
     document.getElementById('YoshiBG_back').style.left='0px';
     document.getElementById('YoshiBG_furthestBack').style.left='0px';
+    document.getElementById('coin').style.left=border.right+'px';
 
     //DLC incoming
     /*$("body" ).click(function() {
@@ -193,7 +197,7 @@
         
         var coinposi=coin.getBoundingClientRect();
         var yoshiposi=yoshi.getBoundingClientRect();
-        var border=document.getElementById('body').getBoundingClientRect();
+        
         
 
         //console.log(coinposi.left);
