@@ -1,0 +1,47 @@
+div#YoshiBG_furthestBack
+{
+    position : absolute;
+    width : 3000px;
+    height : 540px;
+    margin : auto;
+    background-image: url(../img/backlayer_sprite_1.png);
+    z-index : -4;
+}
+
+div#YoshiBG_back
+{
+    position : absolute;
+    width : 3000px;
+    height : 540px;
+    margin : auto;
+    background-image: url(../img/frontlayer_sprite_1.png);
+    z-index : -3;
+}
+
+div#YoshiBG_mid
+{
+    position : absolute;
+    width : 3000px;
+    height : 540px;
+    margin : auto;
+    background-image: url(../img/middlelayer_sprite_1.png);
+    z-index : -2;
+}
+
+div#YoshiBG_frontmost
+{
+    position : absolute;
+    width : 3000px;
+    height : 540px;
+    margin : auto;
+    background-image: url(../img/Background2.png);
+    z-index : -1;
+}
+
+div#Yoshi {
+    position: absolute;
+    top: 320px;
+    left: 150px;
+    margin:auto;
+    z-index: 0;
+}
