@@ -38,14 +38,12 @@ span{
     position : relative;
 }
 
-/*background image*/
 body{
     margin-left : 50px;
     margin-right : 50px;
     background-image : url(../images/yoshi_bg.png);
 }
 
-/*nav bar layout*/
 #bg-alt{
     top: 20px; 
     left: -25px;
@@ -59,7 +57,6 @@ body{
     top: 95px;
 }
 
-/*about text format/layout*/
 #texthome p, h1{
     text-align: center;
     font-family : Helvetica, sans-serif;
@@ -69,7 +66,6 @@ body{
     padding-top: 50px;
 }
 
-/*about text  center justification*/
 #about p{
     font-size: 20px;           
     text-align : justify;
@@ -89,7 +85,6 @@ nav ul{
     display: inline-block;
 }
 
-/*sets everything to zero such that aligns properly*/
 nav, ul, li{
     margin: 0;
     padding: 0;
@@ -105,13 +100,19 @@ nav ul li{
     background: none;
 }
 
+nav ul li a{
+    display: block;
+    padding: 25px 40px;
+    color: #757575;
+    text-decoration: none;
+}
+
 /*when hover over tab of nav bar increases size and changes the background color*/
 nav ul li a:hover{
     background: #1a1e4d;
     transform: scale(1.07);
 }
 
-/*creates the font style and color of the words in the nav bar*/
 nav ul li a{
     color:whitesmoke;
     font-size: 25px;
