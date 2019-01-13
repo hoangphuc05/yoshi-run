@@ -1,18 +1,15 @@
-h1
-{
+h1{
    text-align : center; 
    font-family : Helvetica, sans-serif; 
 }
 
-p, li
-{
+p, li{
     font-family : Helvetica, sans-serif;
     font-size: 18px;
     text-decoration : none; 
 }
 
-span
-{
+span{
     font-weight : bold;
     text-decoration : underline;
     font-size : 20px;
@@ -20,8 +17,7 @@ span
 }
 
 
-#gameDescription, div ul
-{
+#gameDescription, div ul{
     text-align : center;
     font-family : Helvetica, sans-serif;
     font-size: 18px;
@@ -29,13 +25,11 @@ span
     list-style: none;
 }
 
-#italic
-{
+#italic{
     font-style: italic;
 }
 
-#holder
-{
+#holder{
     display : block;
     margin-left : auto;
     margin-right : auto;
@@ -44,12 +38,10 @@ span
     position : relative;
 }
 
-body
-{
+body{
     margin-left : 50px;
     margin-right : 50px;
     background-image : url(../images/yoshi_bg.png);
-
 }
 
 #bg-alt{
@@ -57,13 +49,15 @@ body
     left: -25px;
 }
 
-#title
-{
-    margin: 80px 20px 20px 530px;
+
+/*edits the location of the title on all webpages*/
+#title{
+    position: absolute;
+    left: 44%;
+    top: 95px;
 }
 
-#texthome p, h1
-{
+#texthome p, h1{
     text-align: center;
     font-family : Helvetica, sans-serif;
     font-size: 30px;
@@ -81,6 +75,7 @@ body
     padding-top : 5px;
 }
 
+/*creates the nav bar*/
 nav ul{
     background-color: rgb(0, 0, 0);
     width: 125%;
@@ -89,8 +84,8 @@ nav ul{
     margin-left: -50px;
     list-style: none;
     display: inline-block;
-   
 }
+
 nav, ul, li{
     margin: 0;
     padding: 0;
@@ -98,6 +93,8 @@ nav, ul, li{
     color: blue;
 }
 
+
+/*floats the nav bar to the far left side of the screen*/
 nav ul li{
     float: left;
     position: relative;
@@ -111,7 +108,7 @@ nav ul li a{
     text-decoration: none;
 }
 
-
+/*when hover over tab of nav bar increases size and changes the background color*/
 nav ul li a:hover{
     background: #1a1e4d;
     transform: scale(1.07);
@@ -122,56 +119,7 @@ nav ul li a{
     font-size: 25px;
 }
 
-
-
-.links
-{
-    position : relative;
-    /*margin-bottom: 50px;*/
-    height:100px;
-    width:100px;
-   
-    
-   
-}
-
-a button
-{
-    text-decoration : none;
-    font-family: Helvetica, sans-serif;
-    font-size : 20px; 
-    color : white;
-    display: inline-block;
-    
-}
-
-
-#button
-{
-    display: inline-block;
-    cursor : pointer;
-    border-radius : 4px;
-    border : 1px dodgerblue;
-    font-size: 50px;
-    
-
-}
-
-button:hover
-{
-    transform: scale(1.11);
-}
-
-#bg-alt
-{
-    display : inline-block;
-    height:5em;
-    width: 5em;
-    margin-right : auto;
-    float: left;
-    position : relative;
-}
-
+/*creates the boxes on the resource tab*/
 .box {
     background:rgba(179, 179, 179,0.6);
     width: 800px;
@@ -181,35 +129,25 @@ button:hover
     cursor: pointer;
     color:black;
 }
+
+/*resource page when hover box turns orange*/
 .box:hover{
     transform: scale(1.2);
 }
 
-#logoaspan { 
-    position:absolute; 
-    width:100%;
-    height:100%;
-    top:0;
-    left: 0px;
-  
-    /* edit: added z-index */
-    z-index: 1;
-  
-    /* edit: fixes overlap error in IE7/8, 
-       make sure you have an empty gif */
-    
-}
 
+/*positions the game on the page*/
 .game{
-    /*position: absolute;*/
     margin: auto;
     left: 0px;
 }
 
+/*disable scrolling*/
 #body{
     overflow: hidden;
 }
 
+/*edits scorebox color and font size*/
 #scorebox{
     color:black;
     font-size: 30pt;
