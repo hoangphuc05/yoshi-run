@@ -14,7 +14,11 @@ This is the game page of the Yoshi Run website-->
         <link rel="stylesheet" href="css/YoshiBG.css" />
     </head>
     
-    <iframe src="music/flowergarden.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <iframe src="music/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+
+    <audio controls autoplay loop hidden>
+        <source src="music/flowergarden.mp3" type="audio/mp3">
+    </audio>
     
 
     <img src="images/animated_logo.gif" id="bg-alt" style="height: 10em; width: 10em;"><img src="images/titleanimated.gif" id="title">
@@ -29,7 +33,7 @@ This is the game page of the Yoshi Run website-->
     <!--body text-->
     <body id="body">
         <div id="game">
-            <div id = "YoshiBG_furthestBack"><div id = "scorebox">Coins Collected: 0</div></div>
+            <div id = "YoshiBG_furthestBack"><div id = "scorebox" >Coins Collected: 0</div></div>
             <div id = "YoshiBG_back"></div>
             <div id = "YoshiBG_mid"></div>
             <div id = "YoshiBG_frontmost"></div>
