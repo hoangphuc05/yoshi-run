@@ -54,7 +54,8 @@ body{
 #title{
     position: absolute;
     left: 44%;
-    top: 95px;
+    top: 85px;
+    transform: scale(1.2);
 }
 
 #texthome p, h1{
