@@ -8,7 +8,7 @@
     var prevtime = 0;
     //random location for coin from the right
     var random1=Math.floor((Math.random() * 332) + 268);
-    var randomx=border.right;
+    var randomx=border.right+200;
 
     //radom location for coin from the left
     var randomleftx = (Math.floor((Math.random() * 100) + 5))*(-1);

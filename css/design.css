@@ -151,10 +151,9 @@ nav ul li a{
 /*edits scorebox color and font size*/
 #scorebox{
     color:black;
-    position:fixed;
+    position: absolute;
     font-size: 30pt;
     font-weight: bold;
-    left: 39em;
 }
 #designback{
     position: relative;
