@@ -78,6 +78,8 @@
     document.getElementById('YoshiBG_furthestBack').style.left='0px';
     document.getElementById('coin').style.left=border.right+'px';
 
+    
+
     //DLC incoming
     /*$("body" ).click(function() {
         
@@ -190,6 +192,8 @@
         //console.log(random1);
         document.getElementById('coin').style.top=random1+'px';
         document.getElementById("scorebox").innerHTML = 'Coins Collected: ' + scorecounter;
+        
+        border=document.getElementById('body').getBoundingClientRect();
         //document.getElementById('coin').style.left=randomx+'px';
         //coinpos=coinpos-20;
        //document.getElementById('coin').style.left = coinpos;
